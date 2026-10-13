@@ -2,3 +2,36 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# JavaScript / React
+node_modules/
+dist/
+build/
+.npm/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini

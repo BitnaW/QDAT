@@ -1,8 +1,7 @@
 # QDAT Backend
 
 This is the Python backend for QDAT. Right now it just has a basic FastAPI
-server and a test endpoint. More document processing features will be added
-later.
+server and a test endpoint, but more features are planned.
 
 ## Running it locally
 
@@ -49,7 +48,7 @@ FastAPI also provides automatic API documentation at
 <http://127.0.0.1:8000/docs>.
 
 If PowerShell does not allow the virtual environment activation command, run
-this once and then try activating it again:
+this once and then try activating it again
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
