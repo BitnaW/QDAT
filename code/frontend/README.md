@@ -8,9 +8,8 @@ placeholder pages for the dashboard, documents, codebook, and search.
 From the repository root:
 
 ```powershell
-cd code/frontend
-npm install
-npm run dev
+npm.cmd install
+npm.cmd run dev
 ```
 
 Open the local URL printed by Vite, usually
