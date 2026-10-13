@@ -1,0 +1,30 @@
+# =============================================================================
+# QDAT LOCAL DATABASE SERVICE (POSTGRESQL 16 + PGVECTOR)
+# =============================================================================
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: qdat-postgres
+    restart: unless-stopped
+    environment:
+      # DATABASE CONNECTION CREDENTIALS
+      POSTGRES_USER: qdat_user
+      POSTGRES_PASSWORD: qdat_password
+      POSTGRES_DB: qdat_db
+    ports:
+      - "5432:5432"
+    volumes:
+      # AUTOMATIC SCHEMA INITIALIZATION ON FIRST RUN
+      - ../code/backend/schema.sql:/docker-entrypoint-initdb.d/01_init.sql:ro
+      # LOCAL DATA PERSISTENCE
+      - qdat_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U qdat_user -d qdat_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  # NAMED VOLUME FOR PERSISTING DATABASE FILES
+  qdat_pgdata:
+    driver: local
