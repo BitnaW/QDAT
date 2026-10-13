@@ -1,77 +1,79 @@
 # Sprint 1 Report
 
-## YouTube link of Sprint 1 Video
+## https://youtu.be/OsMSgUeUdqU
 
 ## What's New
-* Feature 1 or Bug Fix 1
-* Feature 2 or Bug Fix 2
-* Feature n or Bug Fix n
+
+* Set up the initial Python backend project structure
+* Created a Python virtual environment and installed required dependencies
+* Implemented a basic API that returns a test response
+* Set up the intial React frontend project structure
 
 ## Work Summary
-Provide a one paragraph synposis of what your team accomplished this sprint. Don't
-repeat the "What's New" list of features. Instead, help the instructor understand
-how you went about the work described there, any barriers you overcame, and any
-significant learnings for your team.
+During Sprint 1 our team focused on establishing the foundation for the application
+and preparing the project for future feature development. We set up the Python backend
+and React frontend as seperate parts of the application, creating the initial structure
+needed for future communication between the user interface (UI) and backend services.
+We also established the GitHub repository and began organizing our development workflow
+through issues and a Kanban board. We also planned the application architecture to
+identify the main components and break the project into manageable tasks. This sprint
+had a few growing pains while we became familiar with the project structure and
+decided on direction and how our collaboration would look going forward but we think
+that we established a solid foundation for future work. The goal looking forward is to
+take the streamlined process we established and continue to integrate more elements in
+an efficient manner.
 
 ## Unfinished Work
-If applicable, explain the work you did not finish in this sprint. For issues/user
-stories in the current sprint that have not been closed, (a) any progress toward
-completion of the issues has been clearly tracked (by checking the checkboxes of
-acceptance criteria), (b) a comment has been added to the issue to explain why the
-issue could not be completed (e.g., "we ran out of time" or "we did not anticipate
-it would be so much work"), and (c) the issue is added to a subsequent sprint, so
-that it can be addressed later.
+The application is still in its initial setup stage, and the core features haven't been
+fully implemented. The backend and frontend have been established as the foundation for
+future development, but additional work is needed to connect the two components and
+implement the application's main functionality.
+
+Any unfinished issues from Sprint 1 will be tracked on the GitHub Kanban board.
 
 ## Completed Issues/User Stories
 Here are links to the issues that we completed in this sprint:
 
-* URL of issue 1
-* URL of issue 2
-* URL of issue n
-
-Reminders (Remove this section when you save the file):
-* Each issue should be assigned to a milestone
-* Each completed issue should be assigned to a pull request
-* Each completed pull request should include a link to a "Before and After" video
-* All team members who contributed to the issue should be assigned to it on
-
-GitHub
-* Each issue should be assigned story points using a label
-* Story points contribution of each team member should be indicated in a comment
+* https://github.com/BitnaW/QDAT/issues/1
+* https://github.com/BitnaW/QDAT/issues/2
+* https://github.com/BitnaW/QDAT/issues/3
+* https://github.com/BitnaW/QDAT/issues/4
 
 ## Incomplete Issues/User Stories
 Here are links to issues we worked on but did not complete in this sprint:
 
-* URL of issue 1 <<One sentence explanation of why issue was not completed>>
-* URL of issue 2 <<One sentence explanation of why issue was not completed>>
-* URL of issue n <<One sentence explanation of why issue was not completed>>
-
-Examples of explanations (Remove this section when you save the file):
-* "We ran into a complication we did not anticipate (explain briefly)."
-* "We decided that the feature did not add sufficient value for us to work on it in this sprint (explain briefly)."
-* "We could not reproduce the bug" (explain briefly).
-* "We did not get to this issue because..." (explain briefly)
+* https://github.com/BitnaW/QDAT/issues/5 <<Ran out of time.>>
+* https://github.com/BitnaW/QDAT/issues/6 <<Ran out of time.>>
+* https://github.com/BitnaW/QDAT/issues/7 <<Ran out of time.>>
+* https://github.com/BitnaW/QDAT/issues/8 <<Ran out of time.>>
+* https://github.com/BitnaW/QDAT/issues/9 <<Ran out of time.>>
 
 ## Code Files for Review
 
 Please review the following code files, which were actively developed during this sprint, for quality:
-* [Name of code file 1](https://github.com/your_repo/file_extension)
-* [Name of code file 2](https://github.com/your_repo/file_extension)
-* [Name of code file 3](https://github.com/your_repo/file_extension)
+* [main.py](https://github.com/BitnaW/QDAT/blob/main/code/backend/app/main.py)
+* [App.jsx](https://github.com/BitnaW/QDAT/blob/main/code/frontend/src/App.jsx)
+* [main.jsx](https://github.com/BitnaW/QDAT/blob/main/code/frontend/src/main.jsx)
 
 ## Retrospective Summary
 
 Here's what went well:
-* Item 1
-* Item 2
-* Item x
+* We established the initial Python backend and React frontend, giving us a starting point for application development.
+* We created a shared GitHub repository and began organizing tasks through issues and a Kanban board.
+* We planned the application's architecture and identified major components that need to be developed.
+* We broke the project into smaller tasks to make future development easier to organize and track.
+
 
 Here's what we'd like to improve:
-* Item 1
-* Item 2
-* Item x
+* Improve our estimation of how much work can realistically be completed during each sprint.
+* Make sure every issue has clear acceptance criteria, assigned team members, story points, and a milestone.
+* Improve consistency in documenting progress.
+* Improve our testing process so that new backend and frontend components can be verified as they are developed.
+
 
 Here are changes we plan to implement in the next sprint:
-* Item 1
-* Item 2
-* Item x
+* Begin connecting the React frontend to the Python backend through API requests.
+* Start implementing the application's core functionality based on the planned architecture.
+* Add or improve backend API endpoints needed for future document processing.
+* Develop the initial frontend interface and identify the components needed for user interaction.
+* Test implemented features against their acceptance criteria and document progress throughout the sprint.
