@@ -11,7 +11,7 @@ class EmbeddingModel(ABC):
     """
 
     @abstractmethod
-    def encode_documents(self, texts: list[str]) -> list[list[float]]:
+    def encode_text_units(self, texts: list[str]) -> list[list[float]]:
         """Return one raw vector per text, in the same order."""
 
     @abstractmethod

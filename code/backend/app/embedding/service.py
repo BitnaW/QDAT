@@ -4,9 +4,12 @@ import math
 import os
 
 from app.embedding.model import EmbeddingModel
+from app.embedding.sentence_transformer_model import SentenceTransformerModel
 
 # Maps a model name to its adapter class. Register new adapters here.
-MODEL_REGISTRY: dict[str, type[EmbeddingModel]] = {}
+MODEL_REGISTRY: dict[str, type[EmbeddingModel]] = {
+    "minilm": SentenceTransformerModel,
+}
 
 
 def _normalize(vector: list[float]) -> list[float]:
@@ -23,11 +26,11 @@ class EmbeddingService:
     def __init__(self, model: EmbeddingModel) -> None:
         self._model = model
 
-    def embed_documents(self, texts: list[str]) -> list[list[float]]:
+    def embed_text_units(self, texts: list[str]) -> list[list[float]]:
         """Return one length-1 vector per text, in input order."""
         if not texts:
             return []
-        return [_normalize(v) for v in self._model.encode_documents(texts)]
+        return [_normalize(v) for v in self._model.encode_text_units(texts)]
 
     def embed_query(self, text: str) -> list[float]:
         """Return a length-1 vector for a search phrase."""
