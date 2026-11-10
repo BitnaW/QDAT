@@ -218,3 +218,12 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
 }
+
+/* Document reader and search states */
+.empty-note { padding: 12px 14px; color: #777; font-size: 11px; }
+.document-text { padding-top: 22px; color: #444; font-size: 13px; line-height: 1.7; white-space: pre-wrap; }
+.search-error { margin-top: 12px; color: var(--crimson); font-size: 11px; }
+.threshold-control { display: block; margin-top: 16px; color: #555; font-size: 11px; }
+.threshold-control strong { color: var(--crimson); }
+.threshold-control input { display: block; width: 100%; max-width: 320px; margin-top: 6px; accent-color: var(--crimson); }
+a.sidebar-subsection-title { text-decoration: none; }

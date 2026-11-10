@@ -58,8 +58,14 @@ class SentenceStore:
         """Return one document, or None if the id is unknown."""
         return self._documents.get(document_id)
 
-    def search(self, query_vector: list[float], top_k: int) -> list[SearchResult]:
-        """Return the top_k sentences most similar to the query vector.
+    def search(
+        self, query_vector: list[float], top_k: int | None, threshold: float = 0.0
+    ) -> list[SearchResult]:
+        """Return the sentences most similar to the query vector, best first.
+
+        top_k limits how many are returned; None returns all of them.
+
+        Sentences with a similarity below the threshold are left out.
 
         Vectors are length 1, so the dot product equals cosine similarity.
         """
@@ -68,6 +74,8 @@ class SentenceStore:
             vectors = self._vectors[document.id]
             for sentence, vector in zip(document.sentences, vectors):
                 similarity = sum(a * b for a, b in zip(query_vector, vector))
+                if similarity < threshold:
+                    continue
                 scored.append(
                     SearchResult(
                         document.id,

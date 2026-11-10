@@ -1,11 +1,12 @@
 """Request and response models for the QDAT HTTP API."""
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class SearchRequest(BaseModel):
     query: str
-    top_k: int = 5
+    top_k: int | None = None  # None returns every sentence above the threshold
+    threshold: float = Field(default=0.0, ge=-1.0, le=1.0)
 
 
 class DocumentSummary(BaseModel):

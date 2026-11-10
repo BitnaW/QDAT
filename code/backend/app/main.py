@@ -142,7 +142,9 @@ def search(request: Request, body: SearchRequest) -> SearchResponse:
         raise HTTPException(status_code=400, detail="Query is empty")
 
     query_vector = request.app.state.embedding_service.embed_query(body.query)
-    results = request.app.state.store.search(query_vector, body.top_k)
+    results = request.app.state.store.search(
+        query_vector, body.top_k, body.threshold
+    )
     return SearchResponse(
         query=body.query,
         results=[
